@@ -1,0 +1,40 @@
+{
+  "name": "login512/login512-laravel",
+  "description": "Official Laravel Package for Login512 Post-Quantum Biometrics and Passkeys",
+  "type": "library",
+  "version": "2.1.1",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Login512 Team",
+      "email": "support@login512.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "illuminate/support": "^10.0|^11.0|^12.0",
+    "illuminate/http": "^10.0|^11.0|^12.0",
+    "illuminate/routing": "^10.0|^11.0|^12.0",
+    "illuminate/view": "^10.0|^11.0|^12.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Login512\\Laravel\\": "src/"
+    },
+    "classmap": [
+      "core/Login512.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Login512\\Laravel\\Login512ServiceProvider"
+      ],
+      "aliases": {
+        "Login512": "Login512\\Laravel\\Facades\\Login512"
+      }
+    }
+  }
+}
